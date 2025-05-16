@@ -35,7 +35,7 @@ function App() {
       if (!videoId) return;
       try {
         const response = await fetch(
-          `https://youty-backend.onrender.com/metadata?url=${encodeURIComponent(
+          `https://youty-backend-1.onrender.com/metadata?url=${encodeURIComponent(
             url
           )}`
         );
@@ -61,7 +61,7 @@ function App() {
 
     try {
       const response = await fetch(
-        `https://youty-backend.onrender.com/download?url=${encodeURIComponent(
+        `https://youty-backend-1.onrender.com/download?url=${encodeURIComponent(
           url
         )}`
       );
