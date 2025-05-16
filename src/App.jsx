@@ -14,6 +14,13 @@ function App() {
     return match ? match[1] : "";
   };
 
+  useEffect(() => {
+    if (metadata) {
+      document.getElementById("result")?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [metadata]);
+
+  
   const handleUrlChange = (e) => {
     const input = e.target.value;
     setUrl(input);
@@ -125,7 +132,7 @@ function App() {
         >
           {loading ? "Converting..." : "Convert to MP3"}
         </button>
-
+            
         {error && (
           <p className="text-red-400 text-sm mt-3 text-center">{error}</p>
         )}
